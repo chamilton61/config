@@ -19,6 +19,11 @@ git clone git@github.com:chamilton61/config.git
 
 6 add 'source ~/config/.vimrc' to your .vimrc file
 
-7 run vim and press enter to ignore the error message about molokai
+7 create a .gitconfig file if there isn't one and add 
+'[include]
+  path = ~/config/.gitconfig'
+  to it
+
+8 run vim and press enter to ignore the error message about molokai
   once you're in vim do ':PluginInstall'
 
