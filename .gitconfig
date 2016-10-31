@@ -12,7 +12,7 @@
 	dump = cat-file -p
 	lgb = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset%n' --abbrev-commit --date=relative --branches
 [core]
-  excludesfile = /home/colby/.gitignore_global
+  excludesfile = ~/config/.gitignore_global
 
 [diff]
   tool = vimdiff
