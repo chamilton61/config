@@ -1,7 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =5
-let g:netrw_dirhist_1='/home/colby/src/RB_Thoth/app/controllers'
-let g:netrw_dirhist_2='/home/colby/src/RB_Thoth/app/controllers/admins'
-let g:netrw_dirhist_3='/home/colby/src/dockerTest/docker-entrypoint-initdb.d'
-let g:netrw_dirhist_4='/home/colby/.vim/bundle/Vundle.vim'
-let g:netrw_dirhist_5='/home/colby/.vim'
