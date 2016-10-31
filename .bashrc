@@ -3,7 +3,7 @@
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
-source ~/git-completion.bash
+source ~/config/git-completion.bash
 
 alias ls='ls -G'
 alias so='source'
