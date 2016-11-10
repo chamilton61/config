@@ -27,6 +27,9 @@ filetype plugin indent on    " required
 set laststatus=2
 set statusline=%f
 
+" set ag to be used in ack.vim instead of Ack
+let g:ackprg = 'ag --nogroup --nocolor --column'
+
 let g:easytags_on_cursorhold = 0
 
 colorscheme molokai
