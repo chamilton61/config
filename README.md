@@ -1,7 +1,7 @@
 # ~/config
 
 
-## SETUP
+## Installationshttps://github.com/chamilton61/config/edit/master/README.md#fork-destination-box
 
 1 check installation of git and vim
 
@@ -9,21 +9,25 @@
 `sudo apt-get update
 sudo apt-get install tmux`
 
-3 install vundle
+3 install ag (https://github.com/ggreer/the_silver_searcher)
+`sudo apt-get install silversearcher-ag`
+
+4 install vundle
 `git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim`
 
-4 clone repo
+## Setting up configurations
+
+1 clone repo
 `git clone git@github.com:chamilton61/config.git`
 
-5 add `source ~/config/.bashrc`to your .bashrc file
+2 add `source ~/config/.bashrc`to your .bashrc file
 
-6 add `source ~/config/.vimrc` to your .vimrc file
+3 add `source ~/config/.vimrc` to your .vimrc file
 
-7 create a .gitconfig file if there isn't one and add 
+4 create a .gitconfig file if there isn't one and add 
 `[include]
   path = ~/config/.gitconfig`
   to it
 
-8 run vim and press enter to ignore the error message about molokai
+5 run vim and press enter to ignore the error message about molokai
   once you're in vim do `:PluginInstall`
-
