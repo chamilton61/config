@@ -33,7 +33,6 @@ let g:ackprg = 'ag --nogroup --nocolor --column'
 let g:easytags_on_cursorhold = 0
 
 colorscheme molokai
-let g:molokai_original = 1
 
 "Syntastic stuff
 set statusline+=%#warningmsg#
@@ -163,13 +162,3 @@ if has('langmap') && exists('+langnoremap')
   " compatible).
   set langnoremap
 endif
-
-
-" Add optional packages.
-"
-" The matchit plugin makes the % command work better, but it is not backwards
-" compatible.
-packadd matchit
-
-
-

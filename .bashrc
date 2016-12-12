@@ -30,11 +30,4 @@ __git_complete gu _git_pull
 
 
 
-export HR_EMAIL='chamilton@raybeam.com'
-export MAIL_DOMAIN='raybeam.com'
-export MAIL_USERNAME='hr@raybeam.com'
-export MAIL_PASSWORD='rayB3@mhr'
-
-export CLIENT_ID=439096052696-l55dmh6qmrm6j0dbn0non9g198ui1hun.apps.googleusercontent.com
-export CLIENT_SECRET=CmY3y4dPBE4tqkFhmZx_6Lqm
 export PATH="$PATH: $HOME/.rvm/bin"
