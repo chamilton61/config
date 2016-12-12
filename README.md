@@ -1,8 +1,8 @@
 # ~/config
 
 
-## Installationshttps://github.com/chamilton61/config/edit/master/README.md#fork-destination-box
-
+## Installations
+---Ubuntu
 1 check installation of git and vim
 
 2 install tmux 
