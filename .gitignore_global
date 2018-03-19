@@ -41,6 +41,10 @@
  ehthumbs.db
  Thumbs.db
 
+# data
+# ######################
+ .csv
+
 # vim stuff
 # ####################
 *.*~

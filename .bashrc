@@ -28,6 +28,6 @@ __git_complete ga _git_add
 alias gu='git pull'
 __git_complete gu _git_pull
 
-
+alias gclean='git branch --merged | egrep -v "(^\*|master|dev)" | xargs git branch -d'
 
 export PATH="$PATH: $HOME/.rvm/bin"

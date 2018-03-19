@@ -10,12 +10,13 @@ call vundle#begin()
 
 " plugins from kkays
 "
+Plugin 'w0rp/ale'
 Plugin 'tomasr/molokai'
 Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'scrooloose/syntastic'
 Plugin 'yonchu/accelerated-smooth-scroll'
 Plugin 'mileszs/ack.vim'
 Plugin 'valloric/MatchTagAlways'
+Plugin 'vim-airline/vim-airline'
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
@@ -48,12 +49,7 @@ elseif exists('$TMUX')
 endif
 
 let g:SuperTabClosePreviewOnPopupClose = 1
-let g:syntastic_html_checkers=['']
-let g:syntastic_javascript_checkers=['eslint']
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 0
-let g:syntastic_check_on_wq = 0
+nnoremap <C-w>E :SyntasticCheck<CR> :SyntasticToggleMode<CR>
 
 set mouse=a "Enable mouse mode/
 if has("mouse_sgr")
@@ -66,8 +62,12 @@ set number "display line numbers
 set colorcolumn=80 "add an indicator for 80 chars
 set backspace=indent,eol,start "backspace works in insert mode
 :autocmd Filetype * set expandtab " writes spaces instead of tabs
+:autocmd Filetype * set smarttab " writes spaces instead of tabs
 :autocmd Filetype * set shiftwidth=2 " writes spaces instead of tabs
 :autocmd Filetype * set tabstop=2 " writes spaces instead of tabs
+:autocmd Filetype * set softtabstop=2 " writes spaces instead of tabs
+:autocmd Filetype *.py set shiftwidth=4 " writes spaces instead of tabs
+:autocmd Filetype *.py set tabstop=4 " writes spaces instead of tabs
 
 syntax on
 
@@ -139,6 +139,8 @@ if has("autocmd")
     \ if line("'\"") >= 1 && line("'\"") <= line("$") |
     \   exe "normal! g`\"" |
     \ endif
+
+  autocmd BufWritePre * :%s/\s\+$//e " Remove trailing whitespace on save
 
   augroup END
 
