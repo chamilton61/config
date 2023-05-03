@@ -1,5 +1,29 @@
 # ~/config
 
+## Vim Plugins
+### ALE:
+Asynchronous Lint Engine, https://github.com/dense-analysis/ale
+
+### Molokai
+Color scheme, https://github.com/dense-analysis/ale
+
+### ctrlp
+Full path fuzzy-finder, https://github.com/ctrlpvim/ctrlp.vim
+
+### Accelerated smooth scroll
+Scroll using mousewheel, https://github.com/yonchu/accelerated-smooth-scroll
+
+### Ack.vim
+ack, but for Vim https://github.com/mileszs/ack.vim
+
+### Match Tag Always
+Highlight matching tag enclosing your cursor location for XML/HTML https://github.com/valloric/MatchTagAlways
+
+### vim-airline
+status line at the bottom of the vim window https://github.com/vim-airline/vim-airline
+
+### Vundle
+vim plugin manager
 
 ## Installations
 ---Ubuntu
