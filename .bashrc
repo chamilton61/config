@@ -14,8 +14,8 @@ alias gb='git branch'
 __git_complete gb _git_branch
 alias gp='git branch ; git push'
 __git_complete gp _git_push
-alias go='git checkout'
-__git_complete go _git_checkout
+alias got='git checkout'
+__git_complete got _git_checkout
 alias gc='git commit'
 __git_complete gc _git_commit
 alias gh='fshow'
@@ -28,6 +28,7 @@ __git_complete ga _git_add
 alias gu='git pull'
 __git_complete gu _git_pull
 
-alias gclean='git branch --merged | egrep -v "(^\*|master|dev)" | xargs git branch -d'
+
+alias gclean='git branch --merged | egrep -v "(^\*|main|master|dev)" | xargs git branch -d'
 
 export PATH="$PATH: $HOME/.rvm/bin"

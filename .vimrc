@@ -17,6 +17,7 @@ Plugin 'yonchu/accelerated-smooth-scroll'
 Plugin 'mileszs/ack.vim'
 Plugin 'valloric/MatchTagAlways'
 Plugin 'vim-airline/vim-airline'
+Plugin 'scrooloose/nerdtree'
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
@@ -164,3 +165,7 @@ if has('langmap') && exists('+langnoremap')
   " compatible).
   set langnoremap
 endif
+
+set clipboard=unnamedplus
+autocmd VimEnter * NERDTree
+autocmd VimEnter * wincmd p
