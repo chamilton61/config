@@ -76,3 +76,8 @@ https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-s
 
 5 run vim and press enter to ignore the error message about molokai
   once you're in vim do `:PluginInstall`
+
+## Ubuntu Quality of Life Things
+
+Switch caps lock and control
+`sudo apt-get install gnome-tweak-tool`
