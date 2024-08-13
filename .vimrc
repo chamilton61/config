@@ -17,7 +17,11 @@ Plugin 'yonchu/accelerated-smooth-scroll'
 Plugin 'mileszs/ack.vim'
 Plugin 'valloric/MatchTagAlways'
 Plugin 'vim-airline/vim-airline'
+
+" Added myself
+"
 Plugin 'scrooloose/nerdtree'
+Plugin 'ycm-core/YouCompleteMe'
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
@@ -28,6 +32,13 @@ filetype plugin indent on    " required
 
 set laststatus=2
 set statusline=%f
+
+" set ale linters
+let g:ale_linters = { "python": ["ruff"] }
+let g:ale_fixers = {
+\       "python": ["black", "ruff"],
+\}
+let g:ale_fix_on_save = 1
 
 " set ag to be used in ack.vim instead of Ack
 let g:ackprg = 'ag --nogroup --nocolor --column'
@@ -60,7 +71,7 @@ else
 end
 set wrap "Wrap lines
 set number "display line numbers
-set colorcolumn=80 "add an indicator for 80 chars
+set colorcolumn=88 "add an indicator for 80 chars
 set backspace=indent,eol,start "backspace works in insert mode
 :autocmd Filetype * set expandtab " writes spaces instead of tabs
 :autocmd Filetype * set smarttab " writes spaces instead of tabs
@@ -109,6 +120,10 @@ map Q gq
 " CTRL-U in insert mode deletes a lot.  Use CTRL-G u to first break undo,
 " so that you can undo CTRL-U after inserting a line break.
 inoremap <C-U> <C-G>u<C-U>
+
+" the _ register is a blackhole register which means it doesn't keep track of
+" what's put in it. This allows you to paste the same thing multiple times.
+vnoremap <leader>p "_dP
 
 " Switch syntax highlighting on, when the terminal has colors
 " Also switch on highlighting the last used search pattern.

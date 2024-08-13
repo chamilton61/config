@@ -29,6 +29,7 @@ alias gu='git pull'
 __git_complete gu _git_pull
 
 
-alias gclean='git branch --merged | egrep -v "(^\*|main|master|dev)" | xargs git branch -d'
+alias gclean='git branch -r --merged | egrep -v "(^\*|main|master|dev)" | sed "s/origin\///" | xargs git branch -d'
+alias gcleansquash='git checkout -q main && git for-each-ref refs/heads/ "--format=%(refname:short)" | while read branch; do mergeBase=$(git merge-base main $branch) && [[ $(git cherry main $(git commit-tree $(git rev-parse "$branch^{tree}") -p $mergeBase -m _)) == "-"* ]] && git branch -D $branch; done'
 
 export PATH="$PATH: $HOME/.rvm/bin"
