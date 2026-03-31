@@ -10,7 +10,7 @@ call vundle#begin()
 
 " plugins from kkays
 "
-Plugin 'w0rp/ale'
+Plugin 'dense-analysis/ale'
 Plugin 'tomasr/molokai'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'yonchu/accelerated-smooth-scroll'
@@ -21,7 +21,7 @@ Plugin 'vim-airline/vim-airline'
 " Added myself
 "
 Plugin 'scrooloose/nerdtree'
-Plugin 'ycm-core/YouCompleteMe'
+Plugin 'github/copilot.vim'
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
@@ -34,9 +34,9 @@ set laststatus=2
 set statusline=%f
 
 " set ale linters
-let g:ale_linters = { "python": ["ruff"] }
+let g:ale_linters = { "python": ["ruff", "ruff_format"] }
 let g:ale_fixers = {
-\       "python": ["black", "ruff"],
+\       "python": ["ruff", "ruff_format"],
 \}
 let g:ale_fix_on_save = 1
 

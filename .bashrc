@@ -18,7 +18,6 @@ alias got='git checkout'
 __git_complete got _git_checkout
 alias gc='git commit'
 __git_complete gc _git_commit
-alias gh='fshow'
 alias dt='git difftool -y'
 __git_complete dt _git_difftool
 alias dts='git difftool -y --staged'
